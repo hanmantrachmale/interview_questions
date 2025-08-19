@@ -60,7 +60,7 @@ In this example, reflection is used to obtain the Type object for MyClass, creat
 
 Using reflection comes with a performance cost, so it should be used judiciously, especially in performance-critical paths of an application.
 
-### 12. Can you explain the concept of middleware in ASP.NET Core?
+### 2. Can you explain the concept of middleware in ASP.NET Core?
 
 **Answer:** Middleware in ASP.NET Core is software that's assembled into an application pipeline to handle requests and responses. Each component in the middleware pipeline is responsible for invoking the next component in the sequence or short-circuiting the chain if necessary. Middleware components can perform a variety of tasks, such as authentication, routing, session management, and logging.
 
@@ -113,7 +113,7 @@ In this example, CustomMiddleware is defined with an InvokeAsync method that ASP
 
 Middleware components in ASP.NET Core provide a powerful way to compose your application's request-handling pipeline, allowing for modular and reusable components that can encapsulate request-processing logic.
 
-### 13. Describe the Dependency Injection (DI) pattern and how it's implemented in .NET Core.
+### 3. Describe the Dependency Injection (DI) pattern and how it's implemented in .NET Core.
 
 **Answer:** Dependency Injection (DI) is a design pattern that facilitates loose coupling between software components by removing the direct dependencies among them. Instead of instantiating dependencies directly, components receive their dependencies from an external source (often an inversion of control container). DI makes your code more modular, easier to test, maintain, and extend.
 
@@ -180,7 +180,7 @@ In this example, IGreetingService is an interface defining a service contract, a
 
 Dependency Injection in .NET Core is a foundational feature that supports the development of decoupled and easily testable applications.
 
-### 14. What is the purpose of the .NET Standard?
+### 4. What is the purpose of the .NET Standard?
 
 **Answer:** The .NET Standard is a formal specification of .NET APIs that are intended to be available on all .NET implementations. The goal of the .NET Standard is to establish greater uniformity in the .NET ecosystem. It enables developers to create libraries that are compatible across different .NET platforms, such as .NET Core, .NET Framework, Xamarin, and others, with a single codebase. This simplifies the development process and enhances code reuse across projects and platforms.
 
@@ -207,7 +207,7 @@ In this example, the class library targets .NET Standard 2.0, meaning it can run
 
 The .NET Standard facilitates the development of portable libraries and helps unify the .NET ecosystem, making it easier for developers to share and reuse code across different .NET platforms.
 
-### 15. Explain the differences between .NET Core, .NET Framework, and Xamarin.
+### 5. Explain the differences between .NET Core, .NET Framework, and Xamarin.
 
 **Answer:** .NET Core, .NET Framework, and Xamarin are all part of the .NET ecosystem, but they serve different purposes and are used in different types of projects. Understanding the differences between them can help you choose the right technology for your specific needs.
 
@@ -240,7 +240,7 @@ Here's a simple comparison:
 
 .NET 5 and onwards (rebranded from .NET Core) aim to unify these platforms under a single .NET runtime and framework that can be used everywhere and that supports all types of application development.
 
-### 16. How does garbage collection work in .NET and how can you optimize it?
+### 6. How does garbage collection work in .NET and how can you optimize it?
 
 **Answer:** Garbage Collection (GC) in .NET is an automatic memory management feature that helps in reclaiming the memory used by objects that are no longer accessible in the application. It eliminates the need for manual memory management, reducing the risks of memory leaks and other memory-related issues.
 
@@ -307,7 +307,7 @@ public class ResourceWrapper : IDisposable
 By understanding and optimizing the .NET garbage collector, developers can improve their applications' performance and reliability.
 
 
-### 17. What are attributes in C# and how can they be used?
+### 7. What are attributes in C# and how can they be used?
 
 **Answer:** Attributes in C# are a powerful way to add declarative information to your code. They are used to add metadata, such as compiler instructions, annotations, or custom information, to program elements (classes, methods, properties, etc.). Attributes can influence the behavior of certain components at runtime or compile time, and they can be queried through reflection.
 
@@ -364,7 +364,7 @@ In this example, MyCustomAttribute is defined with a property Description. It ca
 
 Attributes extend the capabilities of C# by allowing you to define additional information about the behavior and structure of your code in a declarative manner. They are a key part of many .NET frameworks and libraries, enabling various runtime behaviors and compile-time checks.
 
-### 18. Can you describe the process of code compilation in .NET?
+### 8. Can you describe the process of code compilation in .NET?
 
 **Answer:** The process of code compilation in .NET involves converting high-level code (such as C#) into a platform-independent Intermediate Language (IL) and then into platform-specific machine code. This process is facilitated by the .NET Compiler Platform ("Roslyn" for C# and Visual Basic) and the Common Language Runtime (CLR). Here's an overview of the steps involved:
 
@@ -403,7 +403,7 @@ public class Program
 This simple program is compiled to IL when built and then JIT-compiled to native code by the CLR when executed.
 Understanding the compilation process in .NET is crucial for grasping how .NET applications are built, deployed, and executed across different environments and platforms.
 
-### 19. What is the Global Assembly Cache (GAC) and when should it be used?
+### 9. What is the Global Assembly Cache (GAC) and when should it be used?
 
 **Answer:** The Global Assembly Cache (GAC) is a machine-wide code cache for the Common Language Runtime (CLR) in the .NET Framework. It stores assemblies specifically designated to be shared by several applications on the computer. The GAC is used to store shared .NET assemblies that have strong names (which are unique identifiers consisting of a name, version number, culture information, and a public key token).
 
@@ -433,7 +433,7 @@ Note: With the introduction of .NET Core and its focus on application-local depl
 
 The GAC plays a critical role in assembly sharing and versioning in the .NET Framework, facilitating the management of common libraries across applications on a single machine.
 
-## 20. How would you secure a web application in ASP.NET Core?
+## 10. How would you secure a web application in ASP.NET Core?
 Securing an ASP.NET Core web application involves multiple strategies, including authentication, authorization, data protection, and HTTPS enforcement.
 
 ### Example: Enforcing HTTPS in ASP.NET Core
