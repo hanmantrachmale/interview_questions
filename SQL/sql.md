@@ -22,7 +22,7 @@
 19. **What is the difference between scalar functions and table-valued functions?**  
 20. **How would you design a schema for a multi-tenant application in SQL?**  
 
-## 51. **What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN?**
+## 1. **What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN?**
 
 **Answer:**  
 These SQL join types determine how rows from two tables are combined based on a related column.
@@ -131,7 +131,7 @@ FULL OUTER JOIN Orders ON Customers.Id = Orders.CustomerId;
 
 --- 
 
-## 52. **What is a primary key and how does it differ from a unique key?**
+## 2. **What is a primary key and how does it differ from a unique key?**
 
 **Answer:**  
 A **primary key** is a column or combination of columns that uniquely identifies each row in a table. It ensures that:
@@ -178,7 +178,7 @@ CREATE TABLE Employees (
 
 ---
 
-## 53. **What are foreign keys and how do they enforce referential integrity?**
+## 3. **What are foreign keys and how do they enforce referential integrity?**
 
 **Answer:**  
 A **foreign key** is a constraint used to link two tables together. It enforces **referential integrity** by ensuring that the value in one table (child) corresponds to a valid value in another table (parent).
@@ -218,7 +218,7 @@ This ensures that every `CustomerId` in `Orders` must exist in `Customers`.
 
 ---
 
-## 54. **Explain normalization and list the different normal forms.**
+## 4. **Explain normalization and list the different normal forms.**
 
 **Answer:**  
 **Normalization** is the process of organizing data in a database to reduce **redundancy** and improve **data integrity**.
@@ -279,7 +279,7 @@ Each level of normalization is called a **normal form** (NF):
 
 ---
 
-## 55. **What is a clustered index vs a non-clustered index?**
+## 5. **What is a clustered index vs a non-clustered index?**
 
 **Answer:**  
 Indexes improve data retrieval speed in SQL. There are two main types:
@@ -325,7 +325,7 @@ ON Employees (Email);
 
 ---
 
-## 56. **What are transactions in SQL and what are ACID properties?**
+## 6. **What are transactions in SQL and what are ACID properties?**
 
 **Answer:**  
 A **transaction** is a sequence of operations performed as a **single logical unit of work**. Transactions follow the **ACID** properties to ensure data integrity.
@@ -366,7 +366,7 @@ COMMIT;
 
 ---
 
-## 57. **What is the difference between DELETE, TRUNCATE, and DROP?**
+## 7. **What is the difference between DELETE, TRUNCATE, and DROP?**
 
 **Answer:**  
 These SQL commands are used to remove data, but they differ in scope and behavior:
@@ -418,7 +418,7 @@ DROP TABLE Employees;
 
 ---
 
-## 58. **What are window functions in SQL and when would you use them?**
+## 8. **What are window functions in SQL and when would you use them?**
 
 **Answer:**  
 **Window functions** perform calculations across a set of rows that are **related to the current row**, without collapsing rows like `GROUP BY`.
@@ -468,7 +468,7 @@ FROM Employees;
 
 --- 
 
-## 57. **What is the difference between DELETE, TRUNCATE, and DROP?**
+## 7. **What is the difference between DELETE, TRUNCATE, and DROP?**
 
 **Answer:**  
 These SQL commands are used to remove data, but they differ in scope and behavior:
@@ -520,7 +520,7 @@ DROP TABLE Employees;
 
 ---
 
-## 58. **What are window functions in SQL and when would you use them?**
+## 8. **What are window functions in SQL and when would you use them?**
 
 **Answer:**  
 **Window functions** perform calculations across a set of rows that are **related to the current row**, without collapsing rows like `GROUP BY`.
@@ -570,7 +570,7 @@ FROM Employees;
 
 ---
 
-## 59. **How does a Common Table Expression (CTE) work and how is it different from a subquery?**
+## 9. **How does a Common Table Expression (CTE) work and how is it different from a subquery?**
 
 **Answer:**  
 A **Common Table Expression (CTE)** is a named temporary result set defined using the `WITH` keyword. It improves readability and can reference itself (recursive CTEs).
@@ -631,7 +631,7 @@ WHERE Amount > (SELECT AVG(Amount) FROM Sales);
 
 ---
 
-## 60. **What are the advantages and disadvantages of using stored procedures?**
+## 10. **What are the advantages and disadvantages of using stored procedures?**
 
 **Answer:**  
 **Stored procedures** are precompiled SQL statements stored in the database, often used to encapsulate business logic.
@@ -677,7 +677,7 @@ EXEC GetTopSellingProducts @MinQuantity = 50;
 
 ---
 
-## 61. **How can you detect and prevent SQL injection?**
+## 11. **How can you detect and prevent SQL injection?**
 
 **Answer:**  
 **SQL injection** is a security vulnerability where attackers inject malicious SQL code through user input. To detect and prevent it:
@@ -724,7 +724,7 @@ var user = await context.Users
 
 ---
 
-## 62. **What is the difference between EXISTS and IN operators in SQL?**
+## 12. **What is the difference between EXISTS and IN operators in SQL?**
 
 **Answer:**  
 Both `EXISTS` and `IN` are used to filter query results based on another set of results, but they work differently:
@@ -778,7 +778,7 @@ WHERE EXISTS (
 
 ---
 
-## 63. **How does indexing work and how can you identify slow queries?**
+## 13. **How does indexing work and how can you identify slow queries?**
 
 **Answer:**  
 An **index** is a database structure that improves the speed of data retrieval operations on a table at the cost of additional storage and slower write operations (INSERT, UPDATE, DELETE).
@@ -822,7 +822,7 @@ CREATE INDEX IX_Employees_LastName ON Employees(LastName);
 
 ---
 
-## 64. **What is the use of the `EXPLAIN` or `QUERY PLAN` statement?**
+## 14. **What is the use of the `EXPLAIN` or `QUERY PLAN` statement?**
 
 **Answer:**  
 `EXPLAIN` (or `EXPLAIN ANALYZE`) shows the **query execution plan**, which details how the database engine will execute a SQL query.
@@ -882,7 +882,7 @@ SELECT * FROM Orders WHERE CustomerId = 5;
 
 ---
 
-## 65. **What are aggregate functions and how are GROUP BY and HAVING used?**
+## 15. **What are aggregate functions and how are GROUP BY and HAVING used?**
 
 **Answer:**  
 **Aggregate functions** perform calculations on a set of values and return a single value. Common aggregate functions include:
@@ -932,7 +932,7 @@ HAVING COUNT(*) > 5;
 
 ---
 
-## 66. **What is a composite key and when should it be used?**
+## 16. **What is a composite key and when should it be used?**
 
 **Answer:**  
 A **composite key** is a combination of two or more columns used as the **primary key** of a table. Together, these columns **uniquely identify** each row.
@@ -980,7 +980,7 @@ CREATE TABLE CourseEnrollments (
 
 ---
 
-## 67. **What is a materialized view and how does it differ from a regular view?**
+## 17. **What is a materialized view and how does it differ from a regular view?**
 
 **Answer:**  
 A **materialized view** is a database object that stores the result of a query **physically on disk**, unlike a regular view which is a **virtual** table that runs the query each time it is accessed.
@@ -1033,7 +1033,7 @@ REFRESH MATERIALIZED VIEW SalesSummary;
 
 ---
 
-## 68. **How do you handle NULL values in queries and constraints?**
+## 18. **How do you handle NULL values in queries and constraints?**
 
 **Answer:**  
 `NULL` represents **unknown or missing values** in SQL. Handling them properly is critical to maintain data accuracy and avoid logic bugs.
@@ -1094,7 +1094,7 @@ SELECT * FROM Products WHERE Discount <> 0 OR Discount IS NULL;
 
 ---
 
-## 69. **What is the difference between scalar functions and table-valued functions?**
+## 19. **What is the difference between scalar functions and table-valued functions?**
 
 **Answer:**  
 SQL Server (and other RDBMSs) supports two main types of user-defined functions:
@@ -1153,7 +1153,7 @@ SELECT * FROM dbo.GetHighValueOrders(1000);
 
 ---
 
-## 70. **How would you design a schema for a multi-tenant application in SQL?**
+## 10. **How would you design a schema for a multi-tenant application in SQL?**
 
 **Answer:**  
 Multi-tenant applications serve multiple customers (**tenants**) using a shared or isolated database schema. There are 3 common approaches:

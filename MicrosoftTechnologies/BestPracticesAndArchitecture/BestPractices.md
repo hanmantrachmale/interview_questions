@@ -9,7 +9,7 @@
 7. **What tools do you use for debugging and profiling .NET applications?**
 8. **How do you stay updated with the latest .NET technologies and practices?**
 
-## 43. Can you explain SOLID principles?
+## 1. Can you explain SOLID principles?
 **SOLID** is a set of five principles for writing maintainable code:
 
 1. **S**ingle Responsibility Principle
@@ -23,7 +23,7 @@
 5. **D**ependency Inversion Principle
 ---
 
-## 44. What is Continuous Integration/Continuous Deployment (CI/CD)?
+## 2. What is Continuous Integration/Continuous Deployment (CI/CD)?
 CI/CD automates code integration, testing, and deployment.
 
 ### Example: GitHub Actions for CI/CD
@@ -37,7 +37,7 @@ jobs:
       - name: Build and Test
         run: dotnet test
 ```
-## 45. How do you ensure your C# code is secure?
+## 3. How do you ensure your C# code is secure?
 Writing secure C# code requires following best practices to prevent vulnerabilities such as SQL injection, cross-site scripting (XSS), and unauthorized access.
 
 ### Key Security Measures:
@@ -73,7 +73,7 @@ Here, **parameterized queries** prevent SQL injection.
 
 ---
 
-## 46. What are some common performance issues in .NET applications and how do you address them?
+## 4. What are some common performance issues in .NET applications and how do you address them?
 Performance issues in .NET applications often arise due to inefficient memory usage, slow database queries, or excessive allocations.
 
 ### Common Performance Issues and Fixes:
@@ -105,7 +105,7 @@ Using **in-memory caching** reduces expensive database calls.
 
 ---
 
-## 47. Describe the Repository pattern and its benefits.
+## 5. Describe the Repository pattern and its benefits.
 The **Repository Pattern** abstracts the data layer, providing a clean way to manage database operations.
 
 ### Benefits:
@@ -135,7 +135,7 @@ Here, the `UserRepository` encapsulates database operations.
 
 ---
 
-## 48. How do you handle database migrations in Entity Framework?
+## 6. How do you handle database migrations in Entity Framework?
 Migrations in Entity Framework allow changes to the database schema while preserving existing data.
 
 ### Steps to Apply Migrations:
@@ -161,7 +161,7 @@ Adding a migration for this model will create a corresponding database table.
 
 ---
 
-## 49. What tools do you use for debugging and profiling .NET applications?
+## 7. What tools do you use for debugging and profiling .NET applications?
 Effective debugging and profiling tools help identify performance bottlenecks and runtime errors.
 
 ### Popular Tools:
@@ -190,7 +190,7 @@ Here, **BenchmarkDotNet** measures memory usage and execution time.
 
 ---
 
-## 50. How do you stay updated with the latest .NET technologies and practices?
+## 8. How do you stay updated with the latest .NET technologies and practices?
 Staying current with .NET advancements ensures that you use the best tools and frameworks.
 
 ### Recommended Ways to Stay Updated:

@@ -2,18 +2,18 @@
 
 ## Intermediate
 
-11. **Explain polymorphism and its types in C#.**
-12. **What are delegates and how are they used in C#?**
-13. **Describe what LINQ is and give an example of where it might be used.**
-14. **What is the difference between an abstract class and an interface?**
-15. **How do you manage memory in .NET applications?**
-16. **Explain the concept of threading in .NET.**
-17. **What is async/await and how does it work?**
-18. **Describe the Entity Framework and its advantages.**
-19. **What are extension methods and where would you use them?**
-20. **How do you handle exceptions in a method that returns a Task?**
+1. **Explain polymorphism and its types in C#.**
+2. **What are delegates and how are they used in C#?**
+3. **Describe what LINQ is and give an example of where it might be used.**
+4. **What is the difference between an abstract class and an interface?**
+5. **How do you manage memory in .NET applications?**
+6. **Explain the concept of threading in .NET.**
+7. **What is async/await and how does it work?**
+8. **Describe the Entity Framework and its advantages.**
+9. **What are extension methods and where would you use them?**
+10. **How do you handle exceptions in a method that returns a Task?**
 
-### 11. Explain polymorphism and its types in C#.
+### 1. Explain polymorphism and its types in C#.
 
 **Answer:** Polymorphism is a core concept in object-oriented programming (OOP) that allows objects to be treated as instances of their parent class rather than their actual derived class. This enables methods to perform different tasks based on the object that invokes them, enhancing flexibility and enabling code reusability. In C#, polymorphism can be implemented in two ways: static (compile-time) polymorphism and dynamic (runtime) polymorphism.
 
@@ -77,7 +77,7 @@ class Program
 
 In the example above, the Calculator class demonstrates static polymorphism through method overloading, allowing the Add method to be called with different numbers of parameters. The Animal and Dog classes illustrate dynamic polymorphism, where the Speak method in the Dog class overrides the Speak method in its base class, Animal. The type of polymorphism used depends on the object reference at runtime, showcasing polymorphism's flexibility in OOP.
 
-### 12. What are delegates and how are they used in C#?
+### 2. What are delegates and how are they used in C#?
 
 **Answer:** Delegates in C# are type-safe function pointers or references to methods with a specific parameter list and return type. They allow methods to be passed as parameters, stored in variables, and returned by other methods, which enables flexible and extensible programming designs such as event handling and callback methods. Delegates are particularly useful in implementing the observer pattern and designing frameworks or components that need to notify other objects about events or changes without knowing the specifics of those objects.
 
@@ -121,7 +121,7 @@ class Program
 
 In this example, the Operation delegate is defined to point to any method that accepts an int and returns void. Initially, op is set to the Double method, demonstrating a single-cast delegate. It is then reassigned to the Triple method, and finally, it is used as a multicast delegate to call both Double and Triple methods in sequence. This demonstrates how delegates in C# provide a flexible mechanism for method invocation and can be used to implement event handlers and callbacks.
 
-### 13. Describe what LINQ is and give an example of where it might be used.
+### 3. Describe what LINQ is and give an example of where it might be used.
 
 **Answer:** LINQ (Language Integrated Query) is a powerful feature in C# that allows developers to write expressive, readable code to query and manipulate data. It provides a uniform way to query various data sources, such as collections in memory, databases (via LINQ to SQL, LINQ to Entities), XML documents (LINQ to XML), and more. LINQ queries offer three main benefits: they are strongly typed, offer compile-time checking, and support IntelliSense, which enhances developer productivity and code maintainability.
 
@@ -156,7 +156,7 @@ class Program
 
 In this example, a LINQ query is used to filter a list of integers, selecting only the even numbers. The query is expressed using LINQ's query syntax, which closely resembles SQL in its readability and structure. This demonstrates how LINQ makes it easier to work with collections and other data sources by abstracting the complexity of different data manipulation operations.
 
-### 14. What is the difference between an abstract class and an interface?
+### 4. What is the difference between an abstract class and an interface?
 
 **Answer:** In C#, both abstract classes and interfaces are types that enable polymorphism, allowing objects of different classes to be treated as objects of a common super class. However, they serve different purposes and have different rules:
 
@@ -218,7 +218,7 @@ class Program
 
 In this example, Animal is an abstract class that provides a default implementation of the Sleep method and an abstract Eat method that must be overridden. IMovable is an interface that defines a contract with a Move method that must be implemented. Dog inherits from Animal and implements IMovable, thereby fulfilling both the contract defined by the interface and extending the functionality provided by the abstract class.
 
-### 15. How do you manage memory in .NET applications?
+### 5. How do you manage memory in .NET applications?
 
 **Answer:** Memory management in .NET applications is primarily handled automatically by the Garbage Collector (GC), which provides a high-level abstraction for memory allocation and deallocation, ensuring that developers do not need to manually free memory. However, understanding and cooperating with the GC can help improve your application's performance and memory usage. Here are key aspects of memory management in .NET:
 
@@ -283,7 +283,7 @@ class Program
 
 In this example, ResourceHolder implements IDisposable to properly manage both managed and unmanaged resources. The using statement ensures that Dispose is called automatically, providing a robust pattern for resource management in .NET applications.
 
-### 16. Explain the concept of threading in .NET.
+### 6. Explain the concept of threading in .NET.
 
 **Answer:** Threading in .NET allows for the execution of multiple operations simultaneously within the same process. It enables applications to perform background tasks, UI responsiveness, and parallel computations, improving overall application performance and efficiency. The .NET framework provides several ways to create and manage threads:
 
@@ -326,7 +326,7 @@ In this example, a new thread is created and started to execute the DoWork metho
 
 Using threads can significantly improve the responsiveness and performance of your application but also introduces complexity, such as the need for thread synchronization to avoid race conditions and deadlocks. Proper understanding and careful management are essential when working with threads in .NET.
 
-### 17. What is async/await and how does it work?
+### 7. What is async/await and how does it work?
 
 **Answer:** In C#, `async` and `await` are keywords that simplify writing asynchronous code, making it more readable and maintainable. This feature allows developers to perform non-blocking operations without the complex code traditionally associated with asynchronous programming, such as callbacks or manual thread management. The `async` modifier indicates that a method is asynchronous and may contain one or more `await` expressions. The `await` keyword is applied to a task, indicating that the method should pause until the awaited task completes, allowing other operations to run concurrently without blocking the main thread.
 
@@ -363,7 +363,7 @@ In this example, DownloadContentAsync is an asynchronous method that downloads c
 
 Async/await simplifies asynchronous programming by allowing developers to write code that's both easy to read and maintain, resembling synchronous code while providing the benefits of asynchronous execution.
 
-### 18. Describe the Entity Framework and its advantages.
+### 8. Describe the Entity Framework and its advantages.
 
 **Answer:** Entity Framework (EF) is an open-source object-relational mapping (ORM) framework for .NET. It enables developers to work with databases using .NET objects, eliminating the need for most of the data-access code that developers usually need to write. Entity Framework provides a high-level abstraction over database connections and operations, allowing developers to perform CRUD (Create, Read, Update, Delete) operations without having to deal with the underlying database SQL commands directly.
 
@@ -424,7 +424,7 @@ In this example, BloggingContext is the database context that manages the databa
 
 Entity Framework significantly simplifies data access in .NET applications, making it an essential tool for rapid development while ensuring applications are maintainable and scalable.
 
-### 19. What are extension methods and where would you use them?
+### 9. What are extension methods and where would you use them?
 
 **Answer:** Extension methods in C# allow developers to add new methods to existing types without modifying, deriving from, or recompiling the original types. They are static methods defined in a static class, but called as if they were instance methods on the extended type. Extension methods provide a flexible way to extend the functionality of a class or interface.
 
@@ -475,7 +475,7 @@ In this example, ToPascalCase is an extension method defined for the String clas
 
 Extension methods are a powerful feature for extending the capabilities of types, especially when direct modifications to the class are not possible or desirable.
 
-### 20. How do you handle exceptions in a method that returns a Task?
+### 10. How do you handle exceptions in a method that returns a Task?
 
 **Answer:** In asynchronous programming with C#, when a method returns a `Task` or `Task<T>`, exceptions should be handled within the task to avoid unhandled exceptions that can crash the application. Exceptions thrown in a task are captured and placed on the returned task object. To handle these exceptions, you can use a try-catch block within the asynchronous method, or you can inspect the task after it has completed for any exceptions.
 
